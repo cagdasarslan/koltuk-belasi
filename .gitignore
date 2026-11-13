@@ -1,0 +1,10 @@
+node_modules/
+ios/
+android/
+build/
+*.ipa
+.venv/
+data/
+__pycache__/
+.DS_Store
+Thumbs.db

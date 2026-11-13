@@ -1,0 +1,11 @@
+{
+  "appId": "com.cagdasarslan.koltukbelasi",
+  "appName": "Koltuk Belası",
+  "webDir": "app",
+  "backgroundColor": "#0e2640",
+  "ios": {
+    "contentInset": "never",
+    "scrollEnabled": false,
+    "backgroundColor": "#0e2640"
+  }
+}

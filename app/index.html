@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Koltuk Belası: Şehir Senin</title>
+<link rel="stylesheet" href="secim.css">
+</head>
+<body>
+<div class="frame top"><span>Oyuna giriş</span></div>
+
+<button id="sesb" class="sesb" type="button"></button>
+
+<div class="tag"><i class="ico" style="--i:url(icons/user-round.svg)"></i>Yeni başkan</div>
+
+<main id="desk">
+  <div id="sheet">
+    <img src="img/turkiye.webp" alt="Türkiye kabartma haritası" draggable="false">
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="İller"></svg>
+    <div id="ring" hidden></div>
+    <section id="card" hidden></section>
+  </div>
+</main>
+
+<label class="plate">
+  <i class="ico" style="--i:url(icons/search.svg)"></i>
+  <input id="q" list="iller" placeholder="İl ara…" autocomplete="off" spellcheck="false">
+  <datalist id="iller"></datalist>
+</label>
+
+<aside class="note">
+  <h2>Dönem hedefleri</h2>
+  <ul>
+    <li>Halk morali %51 üstünde</li>
+    <li>Afet direncini artır</li>
+    <li>Seçim vaatlerini belirle</li>
+  </ul>
+</aside>
+
+<div class="frame bottom"><span>81 il, 1 başkan</span></div>
+<div class="credit">Yükseklik: Mapzen Terrain Tiles · Sınırlar: © OpenStreetMap katkıcıları (geoBoundaries) · Nüfus: Wikidata</div>
+
+<script src="ses.js"></script>
+<script src="secim.js"></script>
+</body>
+</html>

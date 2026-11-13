@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Koltuk Belası: Şehir Senin</title>
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mahalle.css">
+<link rel="stylesheet" href="istekler.css">
+</head>
+<body>
+<div id="map"></div>
+
+<header class="hud city">
+  <a class="city-name" href="index.html" title="İl seçimine dön">‹ İstanbul</a>
+  <div class="city-sub"><span id="alt">Kamera: — km</span></div>
+</header>
+
+<div class="hud term">
+  <i class="ico" style="--i:url(icons/calendar-days.svg)"></i>
+  <span>Seçime kalan dönem:</span> <b id="months">18 ay</b><small id="term"></small>
+  <button id="next" type="button">Ay sonu</button>
+  <button id="sesb" class="sesb" type="button"></button>
+</div>
+
+<div class="hud zoom">
+  <button id="zin" type="button" aria-label="Yakınlaş"><i class="ico" style="--i:url(icons/plus.svg)"></i></button>
+  <button id="zout" type="button" aria-label="Uzaklaş"><i class="ico" style="--i:url(icons/minus.svg)"></i></button>
+</div>
+
+<aside id="panel" class="panel" hidden></aside>
+
+<footer class="hud stats">
+  <div class="stat"><span>Toplam bütçe <em id="net"></em></span><b id="budget" class="good">—</b></div>
+  <div class="stat"><span>Genel mutluluk <em>baraj %51</em></span><b id="happy">—</b></div>
+  <div class="stat"><span>Afet direnci</span><b id="resil" class="warn">—</b></div>
+  <div class="stat"><span>Siyasi sermaye</span><b id="capital">—</b></div>
+</footer>
+
+<nav class="hud menu">
+  <button type="button" data-tab="istekler"><i class="ico" style="--i:url(icons/map-pin.svg)"></i>İstekler<span class="cnt" id="reqcnt"></span></button>
+  <button type="button" data-tab="yapilar"><i class="ico" style="--i:url(icons/building-2.svg)"></i>Yapılar</button>
+  <button type="button" data-tab="hizmetler"><i class="ico" style="--i:url(icons/wrench.svg)"></i>Hizmetler</button>
+  <button type="button" data-tab="politikalar"><i class="ico" style="--i:url(icons/scale.svg)"></i>Meclis</button>
+  <button type="button" data-tab="raporlar"><i class="ico" style="--i:url(icons/file-text.svg)"></i>Raporlar</button>
+</nav>
+
+<div id="toast" class="toast" hidden></div>
+<div id="banner" class="banner" hidden></div>
+<div id="sheet" class="sheet" hidden></div>
+<div id="vote" class="result" hidden></div>
+<div id="result" class="result" hidden></div>
+<div class="credit">Uydu: değiştirilmiş Copernicus Sentinel verisi 2025 · Sınırlar: © OpenStreetMap katkıcıları</div>
+
+<script src="vendor/leaflet.js"></script>
+<script src="ses.js"></script>
+<script src="portre.js"></script>
+<script src="oyun.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Koltuk Belası — mahalle sistemi: istek iğneleri, yapı işaretleri, yerleştirme kipi, hizmet bütçesi, meclis */
+.mlabel::before { content: none; }
+.mlabel b { font-weight: 400; letter-spacing: -1px; }
+.dlabel .badge { min-width: 18px; padding: 2px 5px 0; border-radius: 9px; background: var(--warn); color: #201400; font: 14px/16px var(--head); text-align: center; }
+.pin { position: absolute; transform: translate(-50%, -100%); width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50% 50% 50% 4px; rotate: -45deg; background: var(--warn); color: #201400; border: 2px solid #fff; box-shadow: 0 3px 8px rgba(0, 0, 0, .6); cursor: pointer; font-size: 14px; }
+.pin .ico { rotate: 45deg; }
+.pin.late { background: var(--bad); color: #fff; animation: pinpulse 1.2s ease-in-out infinite; }
+.pin.on { outline: 3px solid var(--cyan); }
+@keyframes pinpulse { 50% { box-shadow: 0 0 0 7px rgba(255, 84, 104, .35), 0 3px 8px rgba(0, 0, 0, .6); } }
+.vfar .pin { width: 22px; height: 22px; font-size: 10px; border-width: 1.5px; }
+.fac { position: absolute; transform: translate(-50%, -50%); width: 28px; height: 28px; display: grid; place-items: center; border-radius: 7px; background: #0f5a78; color: #fff; border: 2px solid var(--cyan); box-shadow: 0 2px 8px rgba(0, 0, 0, .6); cursor: pointer; font-size: 14px; }
+.fac.doing { background: rgba(10, 16, 24, .85); border-style: dashed; color: var(--cyan); }
+.fac small { position: absolute; right: -7px; top: -8px; min-width: 16px; padding: 1px 3px 0; border-radius: 8px; background: var(--cyan); color: #04202c; font: 12px/14px var(--head); text-align: center; }
+.vfar .fac { width: 16px; height: 16px; font-size: 8px; border-width: 1px; border-radius: 4px; }
+.vfar .fac small { display: none; }
+@media (prefers-reduced-motion: reduce) { .pin.late { animation: none; } .seats.big i { animation: none !important; opacity: 1 !important; } }
+
+.banner { position: fixed; z-index: 860; left: 50%; top: 66px; transform: translateX(-50%); display: flex; align-items: center; gap: 14px; width: min(720px, calc(100% - 24px)); padding: 10px 12px 10px 14px; background: rgba(8, 20, 30, .95); border: 1px solid var(--cyan); border-radius: 12px; box-shadow: 0 0 22px rgba(79, 216, 255, .3), 0 10px 30px rgba(0, 0, 0, .6); font-size: 13px; line-height: 1.45; }
+.btxt { display: flex; gap: 10px; align-items: center; flex: 1; min-width: 0; }
+.btxt > .ico { font-size: 26px; color: var(--cyan); }
+.btxt b { font: 400 19px/1 var(--head); letter-spacing: .05em; text-transform: uppercase; }
+.btxt .hl { color: var(--cyan); font-weight: 600; }
+.bbtn { display: flex; gap: 6px; flex: none; }
+.mini.ok { border-color: #7dffb4; background: rgba(57, 255, 142, .22); color: #d6ffe7; }
+.mini.ok[disabled] { border-color: var(--line); background: rgba(255, 255, 255, .05); color: var(--dim); }
+
+.panel .back { display: block; margin: -4px 0 6px -4px; padding: 4px 6px; border: 0; background: none; color: var(--cyan); font: 600 12.5px var(--body); }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin: 6px 0 8px; }
+.chips span { padding: 3px 8px 2px; border-radius: 20px; border: 1px solid var(--line); font-size: 11.5px; color: var(--dim); }
+.devrow { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; font-size: 12px; color: var(--dim); }
+.stars { color: #ffd23f; font-size: 17px; letter-spacing: 1px; line-height: 1; }
+.stars i { font-style: normal; color: rgba(255, 255, 255, .2); }
+.panel h3.sub { margin: 12px 0 6px; font: 400 17px/1 var(--head); letter-spacing: .07em; text-transform: uppercase; color: var(--warn); }
+.panel .hint { margin: 4px 0 8px; }
+.rq { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; padding: 5px 5px 5px 8px; border: 1px solid var(--line); border-radius: 9px; background: rgba(255, 255, 255, .035); }
+.rq.late { border-color: rgba(255, 84, 104, .7); }
+.rqn { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; padding: 2px 0; border: 0; background: none; text-align: left; font-size: 11.5px; color: var(--dim); }
+.rqn .ico { font-size: 18px; color: var(--warn); }
+.rqn b { display: block; font-size: 13px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rqn span { min-width: 0; }
+.rq .mini { min-width: 68px; }
+
+.fc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 10px; margin: 10px 0 4px; padding: 10px 12px; border: 1px solid rgba(79, 216, 255, .5); border-radius: 10px; background: rgba(12, 34, 48, .96); position: sticky; top: 0; z-index: 2; }
+.fc small { grid-column: 1 / -1; font-size: 11px; color: var(--dim); }
+.fc span { display: block; font-size: 11.5px; color: var(--dim); }
+.fc b { font: 400 25px/1.1 var(--head); letter-spacing: .03em; font-variant-numeric: tabular-nums; }
+.fc em { font: 600 12px var(--body); font-style: normal; }
+.svc { margin-bottom: 8px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, .035); }
+.svh { display: flex; align-items: center; gap: 8px; }
+.svh .ico { font-size: 20px; color: var(--cyan); }
+.svh b { flex: 1; font-size: 14px; font-weight: 600; }
+.sval { font: 22px/1 var(--head); font-variant-numeric: tabular-nums; }
+.svf, .svp { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 12px; color: var(--dim); }
+.svf span:last-child { color: var(--warn); font-weight: 600; font-variant-numeric: tabular-nums; }
+.svp { margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, .08); }
+.svp span { min-width: 0; }
+.svp .mini { font-size: 15px; min-height: 32px; padding: 7px 9px 5px; }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 30px; margin: 4px 0 2px; background: none; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--bad) 0, var(--warn) 55%, var(--good) 66.6%, var(--cyan) 66.7%, var(--cyan) 100%); }
+input[type=range]::-moz-range-track { height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--bad) 0, var(--warn) 55%, var(--good) 66.6%, var(--cyan) 66.7%, var(--cyan) 100%); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; margin-top: -9px; border-radius: 50%; background: #fff; border: 3px solid #17506c; box-shadow: 0 2px 6px rgba(0, 0, 0, .6); }
+input[type=range]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 3px solid #17506c; }
+
+.meclis { margin: 10px 0 4px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, .035); }
+.seats { display: grid; grid-template-columns: repeat(25, 1fr); gap: 3px; }
+.seats i { aspect-ratio: 1; border-radius: 50%; }
+.seats i.y, .dot.y { background: var(--cyan); }
+.seats i.n, .dot.n { background: #b0495a; }
+.seats.big { margin: 10px 0; }
+.seats.big i.y { background: var(--good); }
+.seats.big i { opacity: 0; animation: seat .25s forwards; }
+@keyframes seat { from { opacity: 0; transform: scale(.3); } to { opacity: 1; transform: none; } }
+.mrow { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; margin-top: 10px; font-size: 12.5px; color: var(--dim); }
+.mrow b { color: var(--text); font-size: 14px; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; }
+.card.active { border-color: rgba(57, 255, 142, .55); background: rgba(57, 255, 142, .07); }
+.card small.good { color: var(--good); }
+.card small.bad { color: var(--bad); }
+.card small.warn { color: var(--warn); }
+.vbtn { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+.vbtn .mini { font-size: 15px; min-height: 34px; padding: 8px 10px 6px; }
+.linkrow { width: 100%; background: none; border: 0; border-bottom: 1px solid rgba(255, 255, 255, .07); text-align: left; color: var(--text); }
+.linkrow span:last-child { color: var(--dim); flex: none; }
+.starbar { display: flex; height: 12px; border-radius: 6px; overflow: hidden; gap: 1px; }
+.starbar i { min-width: 2px; }
+.oylama h1 { margin-top: 2px; }
+#capital { color: var(--cyan); }
+
+@media (max-width: 760px), (max-height: 460px) {
+  .banner { top: 52px; padding: 7px 8px 7px 10px; gap: 8px; font-size: 11.5px; }
+  .btxt b { font-size: 15px; }
+  .btxt > .ico { font-size: 20px; }
+  .fc b { font-size: 19px; }
+  .rqn b { font-size: 12px; }
+}

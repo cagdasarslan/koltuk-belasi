@@ -1,0 +1,17 @@
+{
+  "name": "koltuk-belasi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Koltuk Belası: Şehir Senin — mobil siyasi strateji ve şehir yönetimi oyunu",
+  "scripts": {
+    "serve": "npx --yes http-server app -p 5190 -c-1",
+    "sim": "node tools/sim.js"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.5.3",
+    "@capacitor/ios": "8.5.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.3"
+  }
+}
